@@ -77,21 +77,21 @@ function selectRow(checkbox) {
 }
 
 // Add row
-document.getElementById("addRow").addEventListener("click", () => {
-  const newRow = {
-    id: chemicalData.length + 1,
-    chemicalName: "New Chemical",
-    vendor: "New Vendor",
-    density: 0.0,
-    viscosity: 0.0,
-    packaging: "New Packaging",
-    packSize: 0,
-    unit: "kg",
-    quantity: 0,
-  };
-  chemicalData.push(newRow);
-  displayData(chemicalData);
-});
+// document.getElementById("addRow").addEventListener("click", () => {
+//   const newRow = {
+//     id: chemicalData.length + 1,
+//     chemicalName: "New Chemical",
+//     vendor: "New Vendor",
+//     density: 0.0,
+//     viscosity: 0.0,
+//     packaging: "New Packaging",
+//     packSize: 0,
+//     unit: "kg",
+//     quantity: 0,
+//   };
+//   chemicalData.push(newRow);
+//   displayData(chemicalData);
+// });
 
 // Delete selected row
 document.getElementById("deleteRow").addEventListener("click", () => {
