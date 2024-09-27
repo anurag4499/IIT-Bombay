@@ -1,0 +1,116 @@
+/* Basic styling for the table */
+body {
+  font-family: Arial, sans-serif;
+  /* margin: 20px; */
+  margin: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main{
+    margin-top: 30px !important;
+    margin: auto;
+    width: 50%;
+  }
+}
+
+.cursor{
+  cursor: pointer !important;
+}
+
+/* h1 {
+  text-align: left;
+  font-size: 24px;
+} */
+
+table {
+  /* width: 100%; */
+  border:2px solid rgb(199, 199, 199);
+  border-collapse: collapse;
+  
+}
+
+/* table, th, td {
+  border: 1px solid #ccc;
+} */
+
+th {
+  background-color: rgb(243, 242, 242);
+  cursor: pointer !important;
+}
+
+th, td {
+  padding: 5px 12px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.gm-mg{
+  color: gray;
+}
+
+tr:hover {
+  background-color: #dbd7ef;
+}
+
+/* Toolbar styling */
+#toolbar i {
+    cursor: pointer;
+}
+
+
+/* button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+} */
+
+/* button:hover {
+  background-color: #0056b3;
+}
+
+/* Highlight the selected row */
+/* .selected {
+  background-color: #d1e7ff !important;
+}
+
+/* Checkbox styling */
+
+/* input[type="checkbox"] {
+  cursor: pointer;
+}  */
+.border-right{
+  border-right: 2px solid rgb(199, 199, 199);
+}
+
+.blue{
+  color: blue;
+}
+.gray{
+  color: rgb(148, 148, 148);
+}
+
+.moveUp-dwon:hover{
+  color: blue;
+}
+.red{
+  color: red;
+}
+
+moveUp-dwon::before, [class*=" bi-"]::before, [class^=bi-]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+}

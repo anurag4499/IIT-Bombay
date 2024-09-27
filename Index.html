@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Supplies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main "   >
+    <div class="d-flex justify-content-between" >
+
+
+  <h3>Chemical supplies</h3>
+
+  <!-- Toolbar buttons -->
+  <div id="toolbar text-end">
+    <i  id="addRow" class="blue fs-4 bi bi-plus-circle-fill"  ></i>
+   <i  id="moveUp"  class=" moveUp-dwon  gray fs-2 fw-bold bi bi-arrow-up-short"></i>
+    <i id="moveDown" class=" moveUp-dwon gray fs-2 fw-bold bi bi-arrow-down-short"></i>
+    <i id="deleteRow" class="red bi fs-4 bi-trash3-fill"></i>
+   <i  id="refresh" onclick="refreshTable()"  class= " fs-4 blue bi bi-arrow-clockwise"></i>
+    <i  id="save" class=" fs-4 blue  bi bi-floppy2-fill"></i>
+  </div>
+</div>
+  <!-- Table -->
+  <table id="chemicalTable" class=" ">
+    <thead>
+      <tr class="lh-1">
+        <th></th> <!-- Checkbox column -->
+        <th  onclick="sortTable(0)"></th>
+        <th  class="border-right" onclick="sortTable(1)" >Chemical name</th>
+        <th  onclick="sortTable(2)">Vendor</th>
+        <th  onclick="sortTable(3)">Density</th>
+        <th  onclick="sortTable(4)">Viscosity </th>
+        <th  onclick="sortTable(5)">Packaging</th>
+        <th  onclick="sortTable(6)">Pack Size</th>
+        <th  onclick="sortTable(7)">Unit</th>
+        <th  onclick="sortTable(8)">Quantity</th>
+        <th>Edit</th>
+      </tr>
+      <tr>
+        <th></th> <!-- Checkbox column -->
+        <th  ></th>
+        <th  class="border-right"></th>
+        <th ></th>
+        <th  class="gm-mg" >(g/m³) </th>
+        <th class="gm-mg" > (m²/s)</th>
+        <th ></th>
+        <th ></th>
+        <th ></th>
+        <th ></th>
+       
+        <th></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+</div>
+
+  <!-- Bootstrap Modal for Add/Edit -->
+  <div class="modal fade" id="chemicalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Add Chemical</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="chemicalForm">
+            <input type="hidden" id="editIndex">
+            <div class="mb-3">
+              <label for="chemicalName" class="form-label">Chemical Name</label>
+              <input type="text" class="form-control" id="chemicalName" required>
+            </div>
+            <div class="mb-3">
+              <label for="vendor" class="form-label">Vendor</label>
+              <input type="text" class="form-control" id="vendor" required>
+            </div>
+            <div class="mb-3">
+              <label for="density" class="form-label">Density (g/m³)</label>
+              <input type="number" step="any" class="form-control" id="density" required>
+            </div>
+            <div class="mb-3">
+              <label for="viscosity" class="form-label">Viscosity (m²/s)</label>
+              <input type="number" step="any" class="form-control" id="viscosity" required>
+            </div>
+            <div class="mb-3">
+              <label for="packaging" class="form-label">Packaging</label>
+              <input type="text" class="form-control" id="packaging" required>
+            </div>
+            <div class="mb-3">
+              <label for="packSize" class="form-label">Pack Size</label>
+              <input type="number" class="form-control" id="packSize" required>
+            </div>
+            <div class="mb-3">
+              <label for="unit" class="form-label">Unit</label>
+              <input type="text" class="form-control" id="unit" required>
+            </div>
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Quantity</label>
+              <input type="number" step="any" class="form-control" id="quantity" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="saveChanges" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
